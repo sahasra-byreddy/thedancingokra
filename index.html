@@ -8,7 +8,114 @@
     <script sec="hhtps://unpkg.com/@tailwindcss/browser@latest"></script>
 </head>
 <style>
-    
+    body {
+        font-family: 'Lora', serif;
+        background-color: #f8f8f8;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    header, footer, section {
+        margin-bottom: 60px;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    header {
+        background-color: #455823;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        border-bottom: 2px solid #ccc;
+    }
+    header .logo {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    header nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+    header nav ul li {
+        margin: 0 15px;
+    }
+    header nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+    section {
+        padding: 30px 0;
+        text-align: center;
+        border-bottom: 1 px solid #eee;
+    }
+    section h2 {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    section p {
+        font-size: 18px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repreat(auto-fit, minmax(250px, ifr));
+        gap: 20 px;
+        margin-top: 30px;
+    }
+    .grid-item {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .grid-item h3 {
+        font-size: 24px;
+        margin-bottom: 12px;
+        color: #333333;
+    }
+    .grid-item p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 1.5px;
+    }
+    .grid-item button{
+        padding: 12px 25px;
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+    }
+    .grid-item button:hover {
+            background-color: #cc5200;
+    }
+    main {
+        padding: 20px;
+    }
+    footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #333;
+        color: white;
+    }
+    footer p {
+        font-size: 16px;
+        color: #555;
+    }
 </style>
 <body>
     <header>
@@ -21,10 +128,64 @@
                     <li><a href="#menu">Menu</a></li>
                     <li><a href="#reviews">Reviews</a></li>
                     <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#revervations">Revervations</a></li>
                 </ul>
+            </nav>
+            <button id="mobile-menu-button" class="mobile-menu-button">Menu</button>
         </div>
     </header>
+
+    <div id="mobile-menu">
+        <div id = "mobile-menu-content">
+            <button id="mobile-menu-close" class="mobile-menu-close">X</button>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#revervations">Revervations</a></li>
+            </ul>
+        </div>
+    </div>    
     <main>
+        <section id="home">
+            <div class="container">
+                <h2>Welcome to Dancing Okra</h2>
+                <p>Where every bite has a beat</p>
+                <a href="menu.html"><button>View the Menu</button></a>
+            </div>
+        </section>
+        <section id="menu">>
+        </section>
+        <section id="reviews">
+            <div class="container">
+                <h2>What Our Customers Say</h2>
+                <div class="grid">
+                    <div class="grid-item">
+                        <h3>Raja Gomez</h3>
+                        <p>"Abosolutely incredible experience! Dancing Okra delivers on every level from the live Bollywood music which had everyone tapping their feet to the signature Okra Curry which was out of this world. The spices were rich and the okra was perfectly cooked, and the ambiance felt so warm and welcoming. I can't wait to come back!"</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Analise Godovan</h3>
+                        <p>"Enchanting atmosphere with Bollywood tunes and cozy decor. The food was perfectly seasoned and cooked, the staff was super friendly and make us feel right at home!"</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Aniska Madhavan</h3>
+                        <p>"The live music nights are so fun! Every bite of the food felt like a jounrey through the flavours of India. Loved the attention to detail with the decor and lighting"</p>
+                    </div>
+                <p>"The best food I've ever had!" - Raja Gomez</p>
+                <p>"A delightful experience!" - Jane Smith</p>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>42075 Ladyfinger Lane, Manchuria, VA, USA 70342</p>
+                <p>thedancingokra@gmail.com</p>
+                <p>Store Hours: 11:00 AM - 11:00 PM</p>
+            </div>
+        </section>
         <p>Content goes here.</p>
     </main>
     <footer>
@@ -34,5 +195,5 @@
 <script>
     // JavaScript code can be added here if needed
     console.log("Hello, World!");
-</script>>
+</script>
 </html>
